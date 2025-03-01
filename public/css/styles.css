@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    flex: 1;
+}
+
+#canvasContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 500px; /* Altura mínima para móviles */
+}
+
+.min-vh-100 {
+    height: calc(100vh - 136px) !important; /* 72px header + 64px footer */
+    min-height: auto !important;
+    margin: 0;
+}
+
+/* Sidebar */
+.bg-light {
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 72px; /* Header height */
+    bottom: 64px; /* Footer height */
+    width: 280px;
+    padding: 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Hamburger button */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Botones */
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Ajustes para las instrucciones */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-3 {
+        order: 2; /* Mover sidebar debajo del canvas en móviles */
+        background: rgba(248, 249, 250, 0.9);
+        padding: 15px;
+    }
+
+    .col-md-9 {
+        order: 1; /* Mover canvas arriba en móviles */
+        height: 70vh; /* Altura fija para el canvas en móviles */
+    }
+
+    #canvasContainer {
+        height: 100%;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+        opacity: 1;
+    }
+}
+
+/* Ajustes para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .min-vh-100 {
+        height: calc(100vh - 136px);
+    }
+
+    #canvasContainer {
+        min-height: 600px;
+    }
+}
+
+/* Solo bloquear scroll en pantallas grandes */
+@media (min-width: 992px) {
+    body {
+        overflow: hidden;
+    }
+    
+    .min-vh-100 {
+        height: calc(100vh - 136px);
+    }
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .sidebar {
+        position: relative;
+        transform: translateX(0);
+        top: 0;
+        bottom: auto;
+        height: calc(100vh - 136px); /* viewport height - (header + footer) */
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1060; /* Higher than sidebar */
+}
