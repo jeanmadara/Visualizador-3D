@@ -64,10 +64,10 @@ Galería web interactiva que presenta modelos 3D de piezas cerámicas precolombi
 
 1. Clone el repositorio
 ```bash
-git clone [url-del-repositorio]
+git clone https://github.com/jeanmadara/Visualizador-3D.git
 ```
 
-2. Abra index.html en su navegador
+2. Abra index.html en su navegador (live server) 
 
 ## Contribuciones
 
