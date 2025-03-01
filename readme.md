@@ -3,7 +3,7 @@
 Galería web interactiva que presenta modelos 3D de piezas cerámicas precolombinas del litoral ecuatoriano, enfocada en la preservación y democratización digital del patrimonio cultural.
 
 ## Demo
-[Ver demo en vivo](https://jeancorrea.com)
+[Ver demo en vivo](https://jeanmadara.github.io/Visualizador-3D/)
 
 ## Características
 
