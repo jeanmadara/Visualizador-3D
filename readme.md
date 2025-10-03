@@ -76,3 +76,6 @@ Las contribuciones son bienvenidas. Por favor, lea las guías de contribución a
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Ver el archivo LICENSE para más detalles.
+
+## Bibliografía 
+[Ver](https://drive.google.com/drive/folders/1DWbBEodcwNe14jdgPJX7g70NpZ-WIP6B?usp=sharing)
